@@ -14,6 +14,7 @@ function playRound(playerSelection, computerSelection) {
         playerWins = computerWins = 0;
         document.getElementById("playerScore").innerHTML = playerWins;
         document.getElementById("computerScore").innerHTML = computerWins;
+        document.getElementById('playAgain').style.visibility = 'hidden';
         result.style.color = 'black';
         result.style.fontWeight = 'normal';
         winner = false;
@@ -53,7 +54,7 @@ function playRound(playerSelection, computerSelection) {
         result.style.fontWeight = 'bold';
         result.style.color = 'green';
         result.textContent = 'You won Rock, Paper, Scissors!'
-        document.getElementById('playAgain').style.visibilty = 'visible';
+        document.getElementById('playAgain').style.visibility = 'visible';
         winner = true;
     }
 
@@ -61,8 +62,7 @@ function playRound(playerSelection, computerSelection) {
         result.style.fontWeight = 'bold';
         result.style.color = 'red';
         result.textContent = 'YOU LOSE IDIOT';
-        let playAgain = document.getElementById('playAgain');
-        playAgain.style.visibilty = 'visible';
+        document.getElementById('playAgain').style.visibility = 'visible';
         winner = true;
     }
 }
